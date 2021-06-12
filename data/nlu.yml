@@ -117,4 +117,4 @@ nlu:
 
 - intent: database_tech
   examples: |
-    - I need (database_name) please
+    - I need [sql]{"entity": "database_name"} please

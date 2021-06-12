@@ -24,7 +24,7 @@ class ActionCheck(Action):
             print(tracker.latest_message)
             if dbname['entity'] == 'database_name':
                 name = dbname['value'].lower()
-                if name == 'sql':
+                if name == 'h':
                     dispatcher.utter_message(text=f"Yes, {name} is a SQL")
 
                 elif name == 'nosql':
