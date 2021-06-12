@@ -2,6 +2,10 @@ version: "2.0"
 
 actions:
   - action_check
+  - action_serverless_list
+  - action_non_serverless_list
+  - action_browser_list
+  - action_crossplatform_list
 
 intents:
   - greet
@@ -64,26 +68,14 @@ responses:
   utter_client:
   - text: "Nice I got some juice client tech for you! What exactly are you interested in? (Browser, Android, iOS, Cross Plattform)"
 
-  utter_browser:
-  - text: "Here you get some popular browser tech:"
-
   utter_ios:
-  - text: "Here you get some popular iOS tech:"
+  - text: "Get startd with iOS development: https://developer.apple.com/tutorials/swiftui"
 
   utter_android:
-  - text: "Here you get some popular Android tech:"
-
-  utter_crossplatform:
-  - text: "Here you get some popular crossplatform tech:"
+  - text: "Get started with Android development: https://developer.android.com/training/basics/firstapp"
 
   utter_server:
   - text: "Exciting! Server! Great joice! Are you looking for serverless or standard backend stuff?"  
-
-  utter_serverless:
-  - text: "Here you get some popular serverless tech:"  
-
-  utter_nonserverless:
-  - text: "Here you get some popular server tech:"  
 
 session_config:
   session_expiration_time: 60

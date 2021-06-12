@@ -39,3 +39,52 @@ class ActionCheck(Action):
                     dispatcher.utter_message(
                         text=f"I do not recognize {name}, are you sure it is correctly spelled?")
         return []
+
+
+class ActionServerlessList(Action):
+    Serverless = Path("data/Serverless.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "action_serverless_list"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=f"Here is a List of Serverless framework. Look here {self.Serverless}")
+        return []
+
+class ActionNonServerlessList(Action):
+    NonServerless = Path("data/Non_Serverless.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "action_non_serverless_list"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=f"Here is a List of Serverless framework. Look here {self.NonServerless}")
+        return []        
+
+class ActionBrowserList(Action):
+    Browser = Path("data/Browser.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "action_browser_list"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        return []                
+
+class ActionCrossplatformList(Action):
+    Crossplatform = Path("data/Crossplatform.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "action_crossplatform_list"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=f"Here is a List of Crossplatform. Look here {self.Crossplatform}")
+        return []             

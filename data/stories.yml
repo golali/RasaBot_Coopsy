@@ -66,7 +66,7 @@ stories:
   steps: 
     - checkpoint: client_checked
     - intent: browser
-    - action: utter_browser
+    - action: action_browser_list
 
 - story: ios tech
   steps: 
@@ -84,7 +84,7 @@ stories:
   steps: 
     - checkpoint: client_checked
     - intent: crossplatform
-    - action: utter_crossplatform
+    - action: action_crossplatform_list
 
 - story: tech decider server
   steps:
@@ -97,10 +97,10 @@ stories:
   steps: 
     - checkpoint: server_checked
     - intent: serverless
-    - action: utter_serverless
+    - action: action_serverless_list
 
 - story: non serverless tech
   steps: 
     - checkpoint: server_checked
     - intent: nonserverless
-    - action: utter_nonserverless        
+    - action: action_non_serverless_list        
