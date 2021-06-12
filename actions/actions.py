@@ -8,11 +8,14 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
+from pathlib import Path
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 class ActionCheck(Action):
+    NoSQL_knowledge = Path("data/NoSQL_database.txt").read_text().split("\n")
+    SQL_knowledge = Path("data/SQL_database.txt").read_text().split("\n")
 
     def name(self) -> Text:
         return "action_check"
@@ -24,11 +27,13 @@ class ActionCheck(Action):
             print(tracker.latest_message)
             if dbname['entity'] == 'database_name':
                 name = dbname['value'].lower()
-                if name == 'h':
-                    dispatcher.utter_message(text=f"Yes, {name} is a SQL")
+                if name == 'sql':
+                    liste = self.SQL_knowledge
+                    dispatcher.utter_message(text=f"Yes, i can give you some good examples. Here is a List of SQL Databases. Look here {liste}")
 
                 elif name == 'nosql':
-                    dispatcher.utter_message(text=f"OK, {name} is a NoSQL")
+                    liste = self.NoSQL_knowledge
+                    dispatcher.utter_message(text=f"Yes, i can give you some good examples. Here is a List of NoSQL Databases. Look here {liste}")
 
                 else:
                     dispatcher.utter_message(
