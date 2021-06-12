@@ -49,3 +49,58 @@ stories:
     - intent: choose_database_content
     - action: utter_db_content
 
+- story: hi client 
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - checkpoint: greeting_checked
+
+- story: tech decider client
+  steps:
+    - checkpoint: greeting_checked
+    - intent: client
+    - action: utter_client
+    - checkpoint: client_checked
+
+- story: browser tech
+  steps: 
+    - checkpoint: client_checked
+    - intent: browser
+    - action: utter_browser
+
+- story: ios tech
+  steps: 
+    - checkpoint: client_checked
+    - intent: ios
+    - action: utter_ios
+
+- story: android tech
+  steps: 
+    - checkpoint: client_checked
+    - intent: android
+    - action: utter_android
+
+- story: crossplatform tech
+  steps: 
+    - checkpoint: client_checked
+    - intent: crossplatform
+    - action: utter_crossplatform
+
+- story: tech decider server
+  steps:
+    - checkpoint: greeting_checked
+    - intent: server
+    - action: utter_server
+    - checkpoint: server_checked
+
+- story: serverless tech
+  steps: 
+    - checkpoint: server_checked
+    - intent: serverless
+    - action: utter_serverless
+
+- story: non serverless tech
+  steps: 
+    - checkpoint: server_checked
+    - intent: nonserverless
+    - action: utter_nonserverless        

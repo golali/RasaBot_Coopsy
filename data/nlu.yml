@@ -118,3 +118,43 @@ nlu:
 - intent: database_tech
   examples: |
     - I need [sql]{"entity": "database_name"} please
+
+- intent: client
+  examples: |
+    - I am looking for a client technologies
+    - Can you help me finding a client technologies
+    - client
+    - client technologies
+
+- intent: server
+  examples: |
+    - server
+
+- intent: browser
+  examples: |
+    - Browser
+    - web
+
+- intent: ios
+  examples: |
+    - iOS
+    - apple
+
+- intent: android
+  examples: |
+    - Android
+    - Google
+
+- intent: crossplatform
+  examples: |
+    - hybrid
+    - all
+    - crossplatform
+
+- intent: serverless
+  examples: |
+    - serverless 
+
+- intent: nonserverless
+  examples: |
+    - backend
