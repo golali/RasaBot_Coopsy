@@ -28,3 +28,24 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: database technology research
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: database
+    - action: utter_db
+    - intent: choose_database_technology
+    - action: utter_db_tech
+    - intent: database_tech
+    - action: action_check
+
+- story: database content research
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: database
+    - action: utter_db
+    - intent: choose_database_content
+    - action: utter_db_content
+

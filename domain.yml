@@ -1,5 +1,8 @@
 version: "2.0"
 
+actions:
+  - action_check
+
 intents:
   - greet
   - goodbye
@@ -8,10 +11,17 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - database
+  - choose_database_content
+  - choose_database_technology
+  - database_tech
+
+entities:
+  - database_name
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! How can I help you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -28,6 +38,20 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_db:
+  - text: "Of Course ! I can definetely help you out with that my friend !
+          But please, to provide you the best Information,
+          Can you do me a favor and tell me if you need a DB-Technology or DB-Content ?"
+
+  utter_db_tech:
+  - text: "Ohh, Thats a nice Drip dude !
+          I can offer you more detail information about SQL Databases or NoSQL Databases.
+          What do you prefere ?"
+
+  utter_db_content:
+  - text: "Ohh, thats interesting ! I hope no Fileshari ning DB's ;)
+          Tell me what kind of content you need, bro !"
 
 session_config:
   session_expiration_time: 60

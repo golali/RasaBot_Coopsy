@@ -90,3 +90,31 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: database
+  examples: |
+    - I am looking for a database
+    - Can you help me finding a database
+    - I need a db for my application
+    - I want to use a db
+    - I want to use a database
+    - Can you find a good db for me ?
+    - Can you find a good database for me ?
+    - database
+    - db
+
+- intent: choose_database_technology
+  examples: |
+    - I want a database Technology
+    - I need only the technology
+    - i just want a db technology
+
+- intent: choose_database_content
+  examples: |
+    - I want a content database
+    - I need only content of a specific database
+    - i just want content
+
+- intent: database_tech
+  examples: |
+    - I need (database_name) please
