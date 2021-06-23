@@ -63,19 +63,7 @@ class ActionNonServerlessList(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         dispatcher.utter_message(text=f"Here is a List of Serverless framework. Look here {self.NonServerless}")
-        return []        
-
-class ActionBrowserList(Action):
-    Browser = Path("data/Browser.txt").read_text().split("\n")
-
-    def name(self) -> Text:
-        return "action_browser_list"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
-        return []                
+        return []                       
 
 class ActionCrossplatformList(Action):
     Crossplatform = Path("data/Crossplatform.txt").read_text().split("\n")
@@ -87,4 +75,52 @@ class ActionCrossplatformList(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         dispatcher.utter_message(text=f"Here is a List of Crossplatform. Look here {self.Crossplatform}")
+        return []             
+
+class ActionBrowserFlavors(Action):
+    Browser = Path("data/browser/Flavors.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "action_javascript_flavors"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        return []
+
+class ActionBrowserFrameworks(Action):
+    Browser = Path("data/browser/FrontEndFrameworks.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "action_front_end_frameworks"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        return []         
+
+class ActionBrowserDataLayer(Action):
+    Browser = Path("data/browser/DataLayer.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "action_browser_data_layer"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        return []          
+
+class ActionBrowserBuildTools(Action):
+    Browser = Path("data/browser/BuildTools.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "action_browser_build_tools"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
         return []             

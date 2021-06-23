@@ -6,15 +6,16 @@ actions:
   - action_non_serverless_list
   - action_browser_list
   - action_crossplatform_list
+  - action_javascript_flavors
+  - action_front_end_frameworks
+  - action_browser_data_layer
+  - action_browser_build_tools
 
 intents:
   - greet
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
   - database
   - choose_database_content
   - choose_database_technology
@@ -27,6 +28,10 @@ intents:
   - server
   - serverless
   - nonserverless
+  - javascript_flavors
+  - front_end_frameworks
+  - browser_data_layer
+  - browser_build_tools
 
 entities:
   - database_name
@@ -35,21 +40,8 @@ responses:
   utter_greet:
   - text: "Hey! How can I help you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
   utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Servus und aufwiederschaun!"
 
   utter_db:
   - text: "Of Course ! I can definetely help you out with that my friend !
@@ -75,7 +67,10 @@ responses:
   - text: "Get started with Android development: https://developer.android.com/training/basics/firstapp"
 
   utter_server:
-  - text: "Exciting! Server! Great joice! Are you looking for serverless or standard backend stuff?"  
+  - text: "Exciting! Server! Great joice! Are you looking for serverless or standard backend stuff?" 
+
+  utter_browser_tech:
+  - text: "Uhhh! I can offer Flavors / Frameworks / Data Layers / Build Tools. What do ya want?"  
 
 session_config:
   session_expiration_time: 60

@@ -7,10 +7,3 @@ LitElement
 Stimulus
 Angular
 Ember
-GraphQL
-Apollo Client
-Vuex
-XState
-Redux
-MobX
-Relay

@@ -2,32 +2,12 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: tech decider client
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - checkpoint: greeting_checked
+    - intent: client
+    - action: utter_client
+    - checkpoint: client_checked
 
 - story: database technology research
   steps:
@@ -66,7 +46,32 @@ stories:
   steps: 
     - checkpoint: client_checked
     - intent: browser
-    - action: action_browser_list
+    - action: utter_browser_tech
+    - checkpoint: browser_checked
+
+- story: browser javascript flavors
+  steps: 
+    - checkpoint: browser_checked
+    - intent: javascript_flavors
+    - action: action_javascript_flavors
+
+- story: browser front end frameworks
+  steps: 
+    - checkpoint: browser_checked
+    - intent: front_end_frameworks
+    - action: action_front_end_frameworks
+ 
+- story: browser data layer
+  steps: 
+    - checkpoint: browser_checked
+    - intent: browser_data_layer
+    - action: action_browser_data_layer
+
+- story: browser build tools
+  steps: 
+    - checkpoint: browser_checked
+    - intent: browser_build_tools
+    - action: action_browser_build_tools
 
 - story: ios tech
   steps: 
