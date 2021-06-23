@@ -10,6 +10,7 @@ actions:
   - action_front_end_frameworks
   - action_browser_data_layer
   - action_browser_build_tools
+  - action_browser_testing
 
 intents:
   - greet
@@ -32,6 +33,7 @@ intents:
   - front_end_frameworks
   - browser_data_layer
   - browser_build_tools
+  - browser_testing
 
 entities:
   - database_name

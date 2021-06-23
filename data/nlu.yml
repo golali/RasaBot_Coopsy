@@ -124,18 +124,25 @@ nlu:
     - flavors
     - languages
     - flavors
+    - Javascript
+    - Typescript
 
 - intent: front_end_frameworks
   examples: |
     - front end frameworks
     - front end
     - frameworks
+    - React
+    - Vue
+    - Angular
 
 - intent: browser_data_layer
   examples: |
     - data layer
     - state handling
     - state
+    - GraphQL
+    - Redux
 
 - intent: browser_build_tools
   examples: |
@@ -143,3 +150,13 @@ nlu:
     - bundling
     - bundle
     - build
+    - Webpack
+
+- intent: browser_testing
+  examples: |
+    - testing
+    - unit tests
+    - smoke tests
+    - integration tests
+    - Jest
+    - Jasmine

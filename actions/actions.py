@@ -124,3 +124,15 @@ class ActionBrowserBuildTools(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
         return []             
+
+class ActionBrowserTesting(Action):
+    Browser = Path("data/browser/Testing.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "action_browser_testing"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        return []           

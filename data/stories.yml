@@ -2,38 +2,40 @@ version: "2.0"
 
 stories:
 
-- story: tech decider client
-  steps:
-    - checkpoint: greeting_checked
-    - intent: client
-    - action: utter_client
-    - checkpoint: client_checked
-
-- story: database technology research
+- story: greeting 
   steps:
     - intent: greet
     - action: utter_greet
+    - checkpoint: greeting_checked
+
+# DATABASE
+
+- story: tech decider database
+  steps:
+    - checkpoint: greeting_checked
     - intent: database
     - action: utter_db
+    - checkpoint: database_checked
+
+## TECH
+
+- story: database technology research
+  steps:
+    - checkpoint: database_checked
     - intent: choose_database_technology
     - action: utter_db_tech
     - intent: database_tech
     - action: action_check
 
+## CONTENT
+
 - story: database content research
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: database
-    - action: utter_db
+    - checkpoint: database_checked
     - intent: choose_database_content
     - action: utter_db_content
 
-- story: hi client 
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - checkpoint: greeting_checked
+# CLIENT
 
 - story: tech decider client
   steps:
@@ -41,6 +43,8 @@ stories:
     - intent: client
     - action: utter_client
     - checkpoint: client_checked
+
+## BROWSER
 
 - story: browser tech
   steps: 
@@ -73,11 +77,21 @@ stories:
     - intent: browser_build_tools
     - action: action_browser_build_tools
 
+- story: browser testing
+  steps: 
+    - checkpoint: browser_checked
+    - intent: browser_testing
+    - action: action_browser_testing
+
+## IOS
+
 - story: ios tech
   steps: 
     - checkpoint: client_checked
     - intent: ios
     - action: utter_ios
+
+## ANDROID
 
 - story: android tech
   steps: 
@@ -85,11 +99,15 @@ stories:
     - intent: android
     - action: utter_android
 
+## CROSSPLATFORM
+
 - story: crossplatform tech
   steps: 
     - checkpoint: client_checked
     - intent: crossplatform
     - action: action_crossplatform_list
+
+# SERVER
 
 - story: tech decider server
   steps:
