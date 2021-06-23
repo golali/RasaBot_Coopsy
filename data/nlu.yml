@@ -31,6 +31,12 @@ nlu:
     - bye bye
     - see you later
 
+- intent: help
+  examples: |
+    - help
+    - i need help
+    - what can you do
+
 - intent: affirm
   examples: |
     - yes

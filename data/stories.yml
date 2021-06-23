@@ -8,6 +8,13 @@ stories:
     - action: utter_greet
     - checkpoint: greeting_checked
 
+- story: help 
+  steps:
+    - checkpoint: greeting_checked
+    - intent: help
+    - action: utter_help
+    - checkpoint: greeting_checked
+
 # DATABASE
 
 - story: tech decider database

@@ -86,7 +86,7 @@ class ActionBrowserFlavors(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        dispatcher.utter_message(text=f"Here is a List of flavors. Look here {self.Browser}")
         return []
 
 class ActionBrowserFrameworks(Action):
@@ -98,7 +98,7 @@ class ActionBrowserFrameworks(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        dispatcher.utter_message(text=f"Here is a List of front end frameworks. Look here {self.Browser}")
         return []         
 
 class ActionBrowserDataLayer(Action):
@@ -110,7 +110,7 @@ class ActionBrowserDataLayer(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        dispatcher.utter_message(text=f"Here is a List of data layer frameworks. Look here {self.Browser}")
         return []          
 
 class ActionBrowserBuildTools(Action):
@@ -122,7 +122,7 @@ class ActionBrowserBuildTools(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        dispatcher.utter_message(text=f"Here is a List of build tools. Look here {self.Browser}")
         return []             
 
 class ActionBrowserTesting(Action):
@@ -134,5 +134,5 @@ class ActionBrowserTesting(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text=f"Here is a List of Browser. Look here {self.Browser}")
+        dispatcher.utter_message(text=f"Here is a List of testing frameworks. Look here {self.Browser}")
         return []           

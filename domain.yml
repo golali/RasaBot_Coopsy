@@ -34,6 +34,7 @@ intents:
   - browser_data_layer
   - browser_build_tools
   - browser_testing
+  - help
 
 entities:
   - database_name
@@ -73,6 +74,9 @@ responses:
 
   utter_browser_tech:
   - text: "Uhhh! I can offer Flavors / Frameworks / Data Layers / Build Tools. What do ya want?"  
+
+  utter_help:
+  - text: "Ask me for Server / Client / Database. I can show you where the real magic happens."
 
 session_config:
   session_expiration_time: 60
