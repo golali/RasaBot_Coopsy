@@ -12,6 +12,7 @@ actions:
   - action_browser_build_tools
   - action_browser_testing
 
+
 intents:
   - greet
   - goodbye
@@ -35,6 +36,10 @@ intents:
   - browser_build_tools
   - browser_testing
   - help
+  - kotlin
+  - java
+  - session_app
+  - lokal app
 
 entities:
   - database_name
@@ -67,7 +72,28 @@ responses:
   - text: "Get startd with iOS development: https://developer.apple.com/tutorials/swiftui"
 
   utter_android:
-  - text: "Get started with Android development: https://developer.android.com/training/basics/firstapp"
+  - text: "Uhhh nice! Android is much better than all the other stuff.
+          But first.... in which programming language do you plan to program?
+          Kotlin vs Java"
+
+  utter_kotlin:
+  - text: "Bro Kotlin is nice! You have good taste in programming language.
+          Here is a link that mai help u out: https://kotlinlang.org/docs/getting-started.html"
+
+  utter_java:
+  - text: "Hmm Java ... it is quite common... but ok, i will help you :)
+          This could help u out: https://developer.android.com/codelabs/build-your-first-android-app#0"
+
+  utter_session:
+  - text: "Jo dude! i would like to know .... do you need something like a user login for session app?"
+
+  utter_session_app:
+  - text: "How to run this
+          Hier du opfer: https://www.tutorialspoint.com/android/android_login_screen.htm
+          oder das: https://firebase.google.com/docs/auth/android/google-signin"
+
+  utter_hardware:
+  - text: "Hier könnte ihr werbung stehen"
 
   utter_server:
   - text: "Exciting! Server! Great joice! Are you looking for serverless or standard backend stuff?" 
@@ -77,6 +103,9 @@ responses:
 
   utter_help:
   - text: "Ask me for Server / Client / Database. I can show you where the real magic happens."
+
+  utter_test:
+    - text: "Your fav. language ist {language}! Have a nice weekend bro :D"
 
 session_config:
   session_expiration_time: 60
