@@ -11,6 +11,7 @@ actions:
   - action_browser_data_layer
   - action_browser_build_tools
   - action_browser_testing
+  - content_research
 
 
 intents:
@@ -18,10 +19,14 @@ intents:
   - goodbye
   - affirm
   - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
   - database
   - choose_database_content
   - choose_database_technology
   - database_tech
+  - keyword_db_research
   - client
   - browser
   - ios
@@ -44,33 +49,37 @@ intents:
 
 entities:
   - database_name
+  - content_name
 
 responses:
   utter_greet:
-  - text: "Hey! How can I help you?"
+  - text: "Hey my name is Coopsy RasaRobot!
+           I am a Chatbot for Students who want to program a project :)
+           How can i help you ?"
 
   utter_goodbye:
-  - text: "Servus und aufwiederschaun!"
+  - text: "Servus und aufwiederschaun ;)"
 
   utter_db:
-  - text: "Of Course ! I can definetely help you out with that my friend !
+  - text: "Of Course ! I can definitely help you out with that my friend !
           But please, to provide you the best Information,
           Can you do me a favor and tell me if you need a DB-Technology or DB-Content ?"
 
   utter_db_tech:
-  - text: "Ohh, Thats a nice Drip dude !
+  - text: "Ohh, That's a nice Drip dude !
           I can offer you more detail information about SQL Databases or NoSQL Databases.
-          What do you prefere ?"
+          What do you prefer ?"
 
   utter_db_content:
-  - text: "Ohh, thats interesting ! I hope no Fileshari ning DB's ;)
+  - text: "Ohh, that's interesting ! I hope no Filesharing DB's ;)
           Tell me what kind of content you need, bro !"
 
   utter_client:
-  - text: "Nice I got some juice client tech for you! What exactly are you interested in? (Browser, Android, iOS, Cross Plattform)"
+  - text: "Nice I got some juicy client tech for you! What exactly are you interested in? (Browser, Android, iOS, Cross Plattform)"
 
   utter_ios:
-  - text: "Get started with iOS development: https://developer.apple.com/tutorials/swiftui"
+  - text: "Oh nice ! Get started with this iOS development Tutorial first: https://developer.apple.com/tutorials/swiftui"
+
 
   utter_android:
   - text: "Uhhh nice! Android is much better than all the other stuff.
@@ -108,15 +117,16 @@ responses:
             i wish you all the best!
             Hau rein dude!"
 
-
   utter_server:
-  - text: "Exciting! Server! Great joice! Are you looking for serverless or standard backend stuff?" 
+  - text: "Exciting! Server! Great choice! Are you looking for serverless or standard backend stuff?"
 
   utter_browser_tech:
-  - text: "Uhhh! I can offer Flavors / Frameworks / Data Layers / Build Tools. What do ya want?"  
+  - text: "Uhhh! I can offer Flavors / Frameworks / Data Layers / Build Tools. What do ya want?"
 
   utter_help:
-  - text: "Ask me for Server / Client / Database. I can show you where the real magic happens."
+  - text: "You can ask me for Server / Client and Databases.
+           I offer also interesting stuff for Mobile Development ;)
+           Just tell me what you need and I can show you where the real magic happens."
 
   utter_test:
     - text: "Your fav. language ist {language}! Have a nice weekend bro :D"

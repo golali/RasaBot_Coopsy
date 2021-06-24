@@ -85,6 +85,16 @@ nlu:
 - intent: database_tech
   examples: |
     - I need [sql]{"entity": "database_name"} please
+    - [sql]{"entity": "database_name"}
+    - can i have [sql]{"entity": "database_name"}
+    -
+- intent: keyword_db_research
+  examples: |
+    - I need [movie]{"entity": "content_name"} please
+    - please give me [movie]{"entity": "content_name"}
+    - just some [movie]{"entity": "content_name"} db
+    - do you have a db for [movie]{"entity": "content_name"}
+    - i want a db for [movie]{"entity": "content_name"}
 
 - intent: client
   examples: |
@@ -99,6 +109,7 @@ nlu:
 
 - intent: browser
   examples: |
+    - i want to use a browser for the app
     - Browser
     - web
 
