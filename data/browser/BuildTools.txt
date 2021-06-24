@@ -1,0 +1,10 @@
+esbuild
+Snowpack
+TypeScript
+webpack
+Parcel
+Rollup
+SWC
+Rome
+Gulp
+Browserify

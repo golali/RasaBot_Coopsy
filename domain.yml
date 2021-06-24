@@ -1,33 +1,82 @@
 version: "2.0"
 
+actions:
+  - action_check
+  - action_serverless_list
+  - action_non_serverless_list
+  - action_browser_list
+  - action_crossplatform_list
+  - action_javascript_flavors
+  - action_front_end_frameworks
+  - action_browser_data_layer
+  - action_browser_build_tools
+  - action_browser_testing
+
 intents:
   - greet
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - database
+  - choose_database_content
+  - choose_database_technology
+  - database_tech
+  - client
+  - browser
+  - ios
+  - android
+  - crossplatform
+  - server
+  - serverless
+  - nonserverless
+  - javascript_flavors
+  - front_end_frameworks
+  - browser_data_layer
+  - browser_build_tools
+  - browser_testing
+  - help
+
+entities:
+  - database_name
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  - text: "Hey! How can I help you?"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Servus und aufwiederschaun!"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_db:
+  - text: "Of Course ! I can definetely help you out with that my friend !
+          But please, to provide you the best Information,
+          Can you do me a favor and tell me if you need a DB-Technology or DB-Content ?"
+
+  utter_db_tech:
+  - text: "Ohh, Thats a nice Drip dude !
+          I can offer you more detail information about SQL Databases or NoSQL Databases.
+          What do you prefere ?"
+
+  utter_db_content:
+  - text: "Ohh, thats interesting ! I hope no Fileshari ning DB's ;)
+          Tell me what kind of content you need, bro !"
+
+  utter_client:
+  - text: "Nice I got some juice client tech for you! What exactly are you interested in? (Browser, Android, iOS, Cross Plattform)"
+
+  utter_ios:
+  - text: "Get startd with iOS development: https://developer.apple.com/tutorials/swiftui"
+
+  utter_android:
+  - text: "Get started with Android development: https://developer.android.com/training/basics/firstapp"
+
+  utter_server:
+  - text: "Exciting! Server! Great joice! Are you looking for serverless or standard backend stuff?" 
+
+  utter_browser_tech:
+  - text: "Uhhh! I can offer Flavors / Frameworks / Data Layers / Build Tools. What do ya want?"  
+
+  utter_help:
+  - text: "Ask me for Server / Client / Database. I can show you where the real magic happens."
 
 session_config:
   session_expiration_time: 60

@@ -2,29 +2,135 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: greeting 
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+    - intent: greet
+    - action: utter_greet
+    - checkpoint: greeting_checked
 
-- story: sad path 1
+- story: help 
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+    - checkpoint: greeting_checked
+    - intent: help
+    - action: utter_help
+    - checkpoint: greeting_checked
 
-- story: sad path 2
+# DATABASE
+
+- story: tech decider database
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - checkpoint: greeting_checked
+    - intent: database
+    - action: utter_db
+    - checkpoint: database_checked
+
+## TECH
+
+- story: database technology research
+  steps:
+    - checkpoint: database_checked
+    - intent: choose_database_technology
+    - action: utter_db_tech
+    - intent: database_tech
+    - action: action_check
+
+## CONTENT
+
+- story: database content research
+  steps:
+    - checkpoint: database_checked
+    - intent: choose_database_content
+    - action: utter_db_content
+
+# CLIENT
+
+- story: tech decider client
+  steps:
+    - checkpoint: greeting_checked
+    - intent: client
+    - action: utter_client
+    - checkpoint: client_checked
+
+## BROWSER
+
+- story: browser tech
+  steps: 
+    - checkpoint: client_checked
+    - intent: browser
+    - action: utter_browser_tech
+    - checkpoint: browser_checked
+
+- story: browser javascript flavors
+  steps: 
+    - checkpoint: browser_checked
+    - intent: javascript_flavors
+    - action: action_javascript_flavors
+
+- story: browser front end frameworks
+  steps: 
+    - checkpoint: browser_checked
+    - intent: front_end_frameworks
+    - action: action_front_end_frameworks
+ 
+- story: browser data layer
+  steps: 
+    - checkpoint: browser_checked
+    - intent: browser_data_layer
+    - action: action_browser_data_layer
+
+- story: browser build tools
+  steps: 
+    - checkpoint: browser_checked
+    - intent: browser_build_tools
+    - action: action_browser_build_tools
+
+- story: browser testing
+  steps: 
+    - checkpoint: browser_checked
+    - intent: browser_testing
+    - action: action_browser_testing
+
+## IOS
+
+- story: ios tech
+  steps: 
+    - checkpoint: client_checked
+    - intent: ios
+    - action: utter_ios
+
+## ANDROID
+
+- story: android tech
+  steps: 
+    - checkpoint: client_checked
+    - intent: android
+    - action: utter_android
+
+## CROSSPLATFORM
+
+- story: crossplatform tech
+  steps: 
+    - checkpoint: client_checked
+    - intent: crossplatform
+    - action: action_crossplatform_list
+
+# SERVER
+
+- story: tech decider server
+  steps:
+    - checkpoint: greeting_checked
+    - intent: server
+    - action: utter_server
+    - checkpoint: server_checked
+
+- story: serverless tech
+  steps: 
+    - checkpoint: server_checked
+    - intent: serverless
+    - action: action_serverless_list
+
+- story: non serverless tech
+  steps: 
+    - checkpoint: server_checked
+    - intent: nonserverless
+    - action: action_non_serverless_list        

@@ -31,6 +31,12 @@ nlu:
     - bye bye
     - see you later
 
+- intent: help
+  examples: |
+    - help
+    - i need help
+    - what can you do
+
 - intent: affirm
   examples: |
     - yes
@@ -50,43 +56,113 @@ nlu:
     - no way
     - not really
 
-- intent: mood_great
+- intent: database
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - I am looking for a database
+    - Can you help me finding a database
+    - I need a db for my application
+    - I want to use a db
+    - I want to use a database
+    - Can you find a good db for me ?
+    - Can you find a good database for me ?
+    - database
+    - db
 
-- intent: mood_unhappy
+- intent: choose_database_technology
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - I want a database Technology
+    - I need only the technology
+    - i just want a db technology
 
-- intent: bot_challenge
+- intent: choose_database_content
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - I want a content database
+    - I need only content of a specific database
+    - i just want content
+
+- intent: database_tech
+  examples: |
+    - I need [sql]{"entity": "database_name"} please
+
+- intent: client
+  examples: |
+    - I am looking for a client technologies
+    - Can you help me finding a client technologies
+    - client
+    - client technologies
+
+- intent: server
+  examples: |
+    - server
+
+- intent: browser
+  examples: |
+    - Browser
+    - web
+
+- intent: ios
+  examples: |
+    - iOS
+    - apple
+
+- intent: android
+  examples: |
+    - Android
+    - Google
+
+- intent: crossplatform
+  examples: |
+    - hybrid
+    - all
+    - crossplatform
+
+- intent: serverless
+  examples: |
+    - serverless 
+
+- intent: nonserverless
+  examples: |
+    - backend
+
+- intent: javascript_flavors
+  examples: |
+    - javascript flavors
+    - flavors
+    - languages
+    - flavors
+    - Javascript
+    - Typescript
+
+- intent: front_end_frameworks
+  examples: |
+    - front end frameworks
+    - front end
+    - frameworks
+    - React
+    - Vue
+    - Angular
+
+- intent: browser_data_layer
+  examples: |
+    - data layer
+    - state handling
+    - state
+    - GraphQL
+    - Redux
+
+- intent: browser_build_tools
+  examples: |
+    - build tools
+    - bundling
+    - bundle
+    - build
+    - Webpack
+
+- intent: browser_testing
+  examples: |
+    - testing
+    - unit tests
+    - smoke tests
+    - integration tests
+    - Jest
+    - Jasmine

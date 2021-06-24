@@ -1,0 +1,7 @@
+GraphQL
+Apollo Client
+Vuex
+XState
+Redux
+MobX
+Relay
