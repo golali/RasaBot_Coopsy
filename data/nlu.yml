@@ -73,12 +73,14 @@ nlu:
     - I want a database Technology
     - I need only the technology
     - i just want a db technology
+    - Db Technology
 
 - intent: choose_database_content
   examples: |
     - I want a content database
     - I need only content of a specific database
     - i just want content
+    - Content
 
 - intent: database_tech
   examples: |
@@ -120,6 +122,31 @@ nlu:
   examples: |
     - Android
     - Google
+
+- intent: kotlin
+  examples: |
+    - kotlin
+
+- intent: java
+  examples: |
+    - java
+
+- intent: session_app
+  examples: |
+    - yes i nedd a session app
+    - login
+    - session app
+
+- intent: hardware_sensor
+  examples: |
+    - GPS
+    - Bluetooth
+    - seonsor from device
+
+- intent: lokal_app
+  examples: |
+    - no
+    - no thanks
 
 - intent: crossplatform
   examples: |

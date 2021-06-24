@@ -13,6 +13,7 @@ actions:
   - action_browser_testing
   - content_research
 
+
 intents:
   - greet
   - goodbye
@@ -40,6 +41,11 @@ intents:
   - browser_build_tools
   - browser_testing
   - help
+  - kotlin
+  - java
+  - session_app
+  - lokal app
+  - hardware_sensor
 
 entities:
   - database_name
@@ -74,8 +80,42 @@ responses:
   utter_ios:
   - text: "Oh nice ! Get started with this iOS development Tutorial first: https://developer.apple.com/tutorials/swiftui"
 
+
   utter_android:
-  - text: "You should definitely start with this one: https://developer.android.com/training/basics/firstapp"
+  - text: "Uhhh nice! Android is much better than all the other stuff.
+          But first.... in which programming language do you plan to program with?
+          Kotlin vs Java"
+
+  utter_kotlin:
+  - text: "Bro Kotlin is nice! You have good taste in programming language.
+          Here is a link that mai help you out:
+          https://kotlinlang.org/docs/getting-started.html "
+
+  utter_java:
+  - text: "Hmm Java ... it is quite common... but ok, i will help you :)
+          This could help you out:
+          https://developer.android.com/codelabs/build-your-first-android-app#0"
+
+  utter_session:
+  - text: "Jo dude! i would like to know .... do you need something like a user login for session app?"
+
+  utter_session_app:
+  - text: "here fresh for you: https://www.tutorialspoint.com/android/android_login_screen.htm
+          or:
+          https://firebase.google.com/docs/auth/android/google-signin"
+
+  utter_hardware:
+  - text: "Do you need also some information how to get access to multiple sensors from the device?
+          please give me some sensors you would like to implement like GPS, Bluetooth etc"
+
+  utter_sensor:
+  - text: "Here is the best link i can find for all sensors you need:
+          https://developer.android.com/reference/android/hardware/Sensor"
+
+  utter_end_android:
+    - text: "I think you are know prepared to start with your own app.
+            i wish you all the best!
+            Hau rein dude!"
 
   utter_server:
   - text: "Exciting! Server! Great choice! Are you looking for serverless or standard backend stuff?"
@@ -87,6 +127,9 @@ responses:
   - text: "You can ask me for Server / Client and Databases.
            I offer also interesting stuff for Mobile Development ;)
            Just tell me what you need and I can show you where the real magic happens."
+
+  utter_test:
+    - text: "Your fav. language ist {language}! Have a nice weekend bro :D"
 
 session_config:
   session_expiration_time: 60
