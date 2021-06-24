@@ -105,6 +105,37 @@ stories:
     - checkpoint: client_checked
     - intent: android
     - action: utter_android
+    - checkpoint: android_checked
+
+- story: kotlin
+  steps:
+    - checkpoint: android_checked
+    - intent: kotlin
+    - action: utter_kotlin
+    - action: utter_session
+    - checkpoint: language_checked
+
+- story: java
+  steps:
+    - checkpoint: android_checked
+    - intent: java
+    - action: utter_java
+    - action: utter_session
+    - checkpoint: language_checked
+
+- story: session_app
+  steps:
+    - checkpoint: language_checked
+    - intent: session_app
+    - action: utter_session_app
+    - action: utter_hardware
+    - checkpoint: session_checked
+
+- story: hardware_komponents
+  steps:
+    - checkpoint: session_checked
+    - intent: hardware_sensor
+    - action: utter_sensor
 
 ## CROSSPLATFORM
 
