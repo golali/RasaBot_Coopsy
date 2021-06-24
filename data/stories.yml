@@ -136,6 +136,7 @@ stories:
     - checkpoint: session_checked
     - intent: hardware_sensor
     - action: utter_sensor
+    - action: utter_end_android
 
 ## CROSSPLATFORM
 

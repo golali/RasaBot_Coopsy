@@ -126,6 +126,12 @@ nlu:
     - login
     - session app
 
+- intent: hardware_sensor
+  examples: |
+    - GPS
+    - Bluetooth
+    - seonsor from device
+
 - intent: lokal_app
   examples: |
     - no

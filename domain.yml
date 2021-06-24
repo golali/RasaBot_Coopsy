@@ -40,6 +40,7 @@ intents:
   - java
   - session_app
   - lokal app
+  - hardware_sensor
 
 entities:
   - database_name
@@ -69,31 +70,44 @@ responses:
   - text: "Nice I got some juice client tech for you! What exactly are you interested in? (Browser, Android, iOS, Cross Plattform)"
 
   utter_ios:
-  - text: "Get startd with iOS development: https://developer.apple.com/tutorials/swiftui"
+  - text: "Get started with iOS development: https://developer.apple.com/tutorials/swiftui"
 
   utter_android:
   - text: "Uhhh nice! Android is much better than all the other stuff.
-          But first.... in which programming language do you plan to program?
+          But first.... in which programming language do you plan to program with?
           Kotlin vs Java"
 
   utter_kotlin:
   - text: "Bro Kotlin is nice! You have good taste in programming language.
-          Here is a link that mai help u out: https://kotlinlang.org/docs/getting-started.html"
+          Here is a link that mai help you out:
+          https://kotlinlang.org/docs/getting-started.html "
 
   utter_java:
   - text: "Hmm Java ... it is quite common... but ok, i will help you :)
-          This could help u out: https://developer.android.com/codelabs/build-your-first-android-app#0"
+          This could help you out:
+          https://developer.android.com/codelabs/build-your-first-android-app#0"
 
   utter_session:
   - text: "Jo dude! i would like to know .... do you need something like a user login for session app?"
 
   utter_session_app:
-  - text: "How to run this
-          Hier du opfer: https://www.tutorialspoint.com/android/android_login_screen.htm
-          oder das: https://firebase.google.com/docs/auth/android/google-signin"
+  - text: "here fresh for you: https://www.tutorialspoint.com/android/android_login_screen.htm
+          or:
+          https://firebase.google.com/docs/auth/android/google-signin"
 
   utter_hardware:
-  - text: "Hier könnte ihr werbung stehen"
+  - text: "Do you need also some information how to get access to multiple sensors from the device?
+          please give me some sensors you would like to implement like GPS, Bluetooth etc"
+
+  utter_sensor:
+  - text: "Here is the best link i can find for all sensors you need:
+          https://developer.android.com/reference/android/hardware/Sensor"
+
+  utter_end_android:
+    - text: "I think you are know prepared to start with your own app.
+            i wish you all the best!
+            Hau rein dude!"
+
 
   utter_server:
   - text: "Exciting! Server! Great joice! Are you looking for serverless or standard backend stuff?" 
