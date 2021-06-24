@@ -47,42 +47,46 @@ entities:
 
 responses:
   utter_greet:
-  - text: "Hey my name is Coopsy RasaRobot! I am  How can i help you ?"
+  - text: "Hey my name is Coopsy RasaRobot!
+           I am a Chatbot for Students who want to program a project :)
+           How can i help you ?"
 
   utter_goodbye:
   - text: "Servus und aufwiederschaun ;)"
 
   utter_db:
-  - text: "Of Course ! I can definetely help you out with that my friend !
+  - text: "Of Course ! I can definitely help you out with that my friend !
           But please, to provide you the best Information,
           Can you do me a favor and tell me if you need a DB-Technology or DB-Content ?"
 
   utter_db_tech:
-  - text: "Ohh, Thats a nice Drip dude !
+  - text: "Ohh, That's a nice Drip dude !
           I can offer you more detail information about SQL Databases or NoSQL Databases.
-          What do you prefere ?"
+          What do you prefer ?"
 
   utter_db_content:
-  - text: "Ohh, thats interesting ! I hope no Filesharing DB's ;)
+  - text: "Ohh, that's interesting ! I hope no Filesharing DB's ;)
           Tell me what kind of content you need, bro !"
 
   utter_client:
   - text: "Nice I got some juicy client tech for you! What exactly are you interested in? (Browser, Android, iOS, Cross Plattform)"
 
   utter_ios:
-  - text: "Get startd with iOS development: https://developer.apple.com/tutorials/swiftui"
+  - text: "Oh nice ! Get started with this iOS development Tutorial first: https://developer.apple.com/tutorials/swiftui"
 
   utter_android:
-  - text: "Get started with Android development: https://developer.android.com/training/basics/firstapp"
+  - text: "You should definitely start with this one: https://developer.android.com/training/basics/firstapp"
 
   utter_server:
-  - text: "Exciting! Server! Great joice! Are you looking for serverless or standard backend stuff?"
+  - text: "Exciting! Server! Great choice! Are you looking for serverless or standard backend stuff?"
 
   utter_browser_tech:
   - text: "Uhhh! I can offer Flavors / Frameworks / Data Layers / Build Tools. What do ya want?"
 
   utter_help:
-  - text: "You can ask me for Server / Client / Database. I can show you where the real magic happens."
+  - text: "You can ask me for Server / Client and Databases.
+           I offer also interesting stuff for Mobile Development ;)
+           Just tell me what you need and I can show you where the real magic happens."
 
 session_config:
   session_expiration_time: 60
