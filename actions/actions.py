@@ -9,7 +9,7 @@
 
 from typing import Any, Text, Dict, List
 from pathlib import Path
-
+from rasa_sdk.events import SlotSet
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
@@ -38,6 +38,23 @@ class ActionCheck(Action):
                 else:
                     dispatcher.utter_message(
                         text=f"I do not recognize {name}, are you sure it is correctly spelled?")
+        return []
+
+class ActionDbContent(Action):
+    Content_knowledge = Path("data/content_database.txt").read_text().split("\n")
+
+    def name(self) -> Text:
+        return "content_research"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        for content in tracker.latest_message['entities']:
+            if content['entity'] == 'content_name':
+                name = content['value'].lower()
+                dispatcher.utter_message(text=f"I do not recognize {name}, are you sure it is correctly spelled?")
+            else:
+                dispatcher.utter_message(text=f"NOT WORKING !")
         return []
 
 

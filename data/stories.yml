@@ -41,6 +41,8 @@ stories:
     - checkpoint: database_checked
     - intent: choose_database_content
     - action: utter_db_content
+    - intent: keyword_db_research
+    - action: content_research
 
 # CLIENT
 
