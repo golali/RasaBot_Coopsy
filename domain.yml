@@ -54,7 +54,7 @@ entities:
 responses:
   utter_greet:
   - text: "Hey my name is Coopsy RasaRobot!
-           I am a Chatbot for Students who want to program a project :)
+           I am a Chatbot for young professionals who want to program a project :)
            How can i help you ?"
 
   utter_goodbye:

@@ -79,7 +79,7 @@ class ActionNonServerlessList(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text=f"Here is a List of Serverless framework. Look here {self.NonServerless}")
+        dispatcher.utter_message(text=f"Here is a List of Server framework. Look here {self.NonServerless}")
         return []                       
 
 class ActionCrossplatformList(Action):
